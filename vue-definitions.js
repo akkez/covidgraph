@@ -313,7 +313,9 @@ let app = new Vue({
   created: function() {
 
     let url = window.location.href.split('?');
-    url = ['', 'location=Belarus&location=Russia&location=US&location=Ukraine&location=Kosovo&location=Poland'];
+    if (url.length < 2) {
+      url = ['', 'location=Belarus&location=Russia&location=US&location=Ukraine&location=Kosovo&location=Poland'];
+    }
 
     if (url.length > 1) {
 
